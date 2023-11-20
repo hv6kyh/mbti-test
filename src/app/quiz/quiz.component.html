@@ -1,0 +1,9 @@
+<div id="quiz-container">
+    <div *ngIf="currentQuestionIndex < titles.length">
+        <h1>{{ titles[currentQuestionIndex] }}</h1>
+        <div *ngFor="let answer of answers[currentQuestionIndex]; index as i">
+            <button (click)="onAnswer(i)">{{ answer }}</button>
+        </div>
+    </div>
+    <p>{{ result }}</p>
+</div>
